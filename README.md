@@ -213,16 +213,21 @@ Assignment-10/
 
 1. **สั่งเทรนโมเดลใหม่จากศูนย์:**
    ```bash
-   python train.py --data_dir dataset --epochs 25 --batch_size 8 --lr 0.001 --img_h 384 --img_w 640
+   python train.py
    ```
+   *(หรือระบุค่าเพิ่ม: `python train.py --epochs 25 --batch_size 8`)*
+
 2. **รันประเมินผลบน Test Set:**
    ```bash
-   python evaluate.py --model_path checkpoints/best_model.pth --data_dir dataset --split test --img_h 384 --img_w 640
+   python evaluate.py
    ```
+   *(หรือระบุชุดข้อมูล: `python evaluate.py --split test`)*
+
 3. **สร้างภาพผลลัพธ์ Snapshots 4-Panel:**
    ```bash
    python predict.py
    ```
+
 4. **วัด Memory Footprint และ FPS:**
    ```bash
    python measure_memory.py
